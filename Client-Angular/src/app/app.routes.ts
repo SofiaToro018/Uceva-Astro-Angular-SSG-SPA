@@ -4,6 +4,7 @@ import { ProductsPage } from './pages/products/products.page';
 import { UsersPage } from './pages/users/users.page';
 import { TeamPage } from './pages/team/team.page';
 import { ServicesPage } from './pages/servics/services.page';
+import { ContactPageComponent } from './pages/contacto/contacto.page';
 
 /**
  * Definición de las rutas principales de la aplicación.
@@ -69,6 +70,16 @@ export const routes: Routes = [
    * 
    */ 
   { path: 'services', component: ServicesPage },
+  /**
+   * Ruta de contacto.
+   * 
+   * @remarks
+   * Renderiza el componente `ContactPageComponent`, encargado de mostrar el formulario de contacto para que los usuarios puedan enviar consultas o mensajes.
+   * Esta ruta se agregó recientemente para incluir la nueva página de contacto en la navegación de la aplicación.
+   * Actualmente, el componente `ContactPageComponent` se encuentra en desarrollo y se espera que esté disponible en la próxima versión de la aplicación.
+   * 
+   */
+  { path: 'contact', component: ContactPageComponent },
   /**
    * Ruta comodín.
    *
