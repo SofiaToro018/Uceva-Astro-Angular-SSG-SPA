@@ -4,7 +4,7 @@
  * en la plataforma.
  * * @remarks
  * Cada servicio incluye un identificador, nombre descriptivo y una categoría
- * que ayuda a filtrar la oferta comercial.
+ * que ayuda a la oferta comercial.
  * * @example
  * ```ts
  * const servicio: Service = {

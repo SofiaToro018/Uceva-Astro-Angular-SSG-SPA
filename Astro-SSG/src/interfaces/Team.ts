@@ -1,7 +1,7 @@
 /**
  * Interfaz que representa a un miembro del equipo de trabajo.
  * * Se utiliza para mostrar el perfil profesional de los colaboradores
- * en la sección de "Nosotros" o "Equipo".
+ * en la sección de "Equipo".
  * * @remarks
  * Incluye datos de contacto y el rol específico que desempeña en la organización.
  * * @example

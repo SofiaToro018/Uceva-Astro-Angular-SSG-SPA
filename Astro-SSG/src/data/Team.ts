@@ -10,6 +10,19 @@ import type { Teams } from "@interfaces/Team";
  * - Ejercicios de arquitectura modular
  * 
  * @type {Teams[]}
+ * 
+ * @remarks
+ * Cada objeto en el array representa a un integrante del equipo con su respectiva 
+ * información de contacto y rol dentro de la organización.
+ * @example
+ * ```ts
+ * const integrante: Teams = {
+ * id: 1,
+ * name: 'Ana Gómez',
+ * role: 'Frontend Developer',
+ * email: 'ana.gomez@gmail.com'
+ * };
+ * ```
  */
 export const TEAM: Teams[] = [
  {

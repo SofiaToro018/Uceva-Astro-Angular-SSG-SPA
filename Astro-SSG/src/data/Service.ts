@@ -10,6 +10,19 @@ import type { Service } from '@interfaces/Services';
  * - Ejercicios académicos
  * 
  * @type {Service[]}
+ * 
+ * @remarks
+ * Cada objeto en el array representa un servicio con su respectiva descripción, categoría y precio.
+ * @example
+ * ```ts
+ * const servicio: Service = {
+ * id: 1,
+ * name: 'Consultoría Tech',
+ * description: 'Asesoría en transformación digital',
+ * category: 'Sistemas',
+ * price: 150000
+ * };
+ * ´´´
  * */
 export const SERVICES: Service[] = [
   {
