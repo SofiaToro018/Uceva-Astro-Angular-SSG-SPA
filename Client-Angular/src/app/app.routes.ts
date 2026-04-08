@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { DatePage } from './pages/date/date.page';
 import { ProductsPage } from './pages/products/products.page';
 import { UsersPage } from './pages/users/users.page';
+import { TeamPage } from './pages/team/team.page';
 
 /**
  * Definición de las rutas principales de la aplicación.
@@ -17,6 +18,7 @@ import { UsersPage } from './pages/users/users.page';
  *
  * @see {@link UsersPage}
  * @see {@link ProductsPage}
+ * @see {@link TeamPage}
  */
 export const routes: Routes = [
 
@@ -46,6 +48,16 @@ export const routes: Routes = [
    * de mostrar la fecha actual del sistema.
    */
   { path: 'date', component: DatePage },
+  /**
+   * Ruta de Team.
+   * 
+   * @remarks
+   * Renderiza el componente `TeamPage`, encargado de mostrar información sobre el equipo de trabajo.
+   * Esta ruta se agregó recientemente para incluir la nueva página del equipo en la navegación de la aplicación.
+   * Actualmente, el componente `TeamPage` se encuentra en desarrollo y se espera que esté disponible en la próxima versión de la aplicación.
+   * 
+   */
+  { path: 'team', component: TeamPage },
 
   /**
    * Ruta comodín.
