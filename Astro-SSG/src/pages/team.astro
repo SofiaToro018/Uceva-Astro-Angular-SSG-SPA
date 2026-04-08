@@ -1,0 +1,46 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+import { TEAM } from "@data/Team";
+import type { Teams } from "@interfaces/Team";
+import Badge from "@components/shared/Badge.astro";
+import type { BadgeType } from "@interfaces/Badge";
+
+const team: Teams[] = TEAM;
+
+const roleMap: Record<string, BadgeType> = {
+  "Project Manager": "primary",
+  "Frontend Developer": "warning",
+  "Backend Developer": "success",
+  "UI/UX Designer": "info",
+  "QA Engineer": "secondary",
+};
+
+---
+
+<MainLayout>
+  <table class="table table-striped border">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Email</th>
+        <th scope="col">Rol</th>
+      </tr>
+    </thead>
+    <tbody>
+      {team.map((team) => (
+        <tr>
+          <th scope="row">{team.id}</th>
+          <td>{team.name}</td>
+          <td>{team.email}</td>
+          <td>
+            <Badge
+              text={team.role}
+              type={roleMap[team.role]}
+            />
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</MainLayout>

@@ -1,0 +1,37 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+
+---
+
+<MainLayout title="Contacto | Astro App">
+
+    <h1 class="mb-4">Formulario de Contacto</h1>
+    
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow-sm border p-4">
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label fw-bold">Nombre Completo</label>
+              <input type="text" class="form-control" id="name" placeholder="Ej: Juan Perez">
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label fw-bold">Correo Electrónico</label>
+              <input type="email" class="form-control" id="email" placeholder="nombre@correo.com">
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label fw-bold">Mensaje</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="¿En qué podemos ayudarte?"></textarea>
+            </div>
+            <div class="d-grid">
+              <button type="button" class="btn btn-primary btn-lg">Enviar Solicitud</button>
+            </div>
+          </form>
+        </div>
+        
+        <div class="mt-4 text-center text-muted">
+          <p>Ubicación: Tuluá, Valle del Cauca - UCEVA</p>
+        </div>
+      </div>
+    </div>
+</MainLayout>

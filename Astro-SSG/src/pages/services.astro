@@ -1,0 +1,44 @@
+---
+import MainLayout from "@layouts/MainLayout.astro";
+import { SERVICES } from "@data/Service";
+import type { Service, ServiceCategory } from "@interfaces/Services";
+import Badge from "@components/shared/Badge.astro";
+import type { BadgeType } from "@interfaces/Badge";
+
+const service: Service[] = SERVICES;
+
+const categoryMap: Record<ServiceCategory, BadgeType> = {
+    'Sistemas' : 'danger',
+    'Software' : 'warning',
+    'Diseño': 'primary',
+    'Infraestructura': 'success',
+}
+---
+
+<MainLayout>
+  <table class="table table-striped border">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Categoria</th>
+      </tr>
+    </thead>
+    <tbody>
+      {service.map((service) => (
+        <tr>
+          <th scope="row">{service.id}</th>
+          <td>{service.name}</td>
+          <td>{service.price}</td>
+          <td>
+            <Badge
+              text={service.category}
+              type={categoryMap[service.category]}
+            />
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</MainLayout>
