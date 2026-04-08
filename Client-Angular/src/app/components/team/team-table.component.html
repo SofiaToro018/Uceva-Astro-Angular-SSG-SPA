@@ -1,0 +1,25 @@
+<table class="table table-striped border">
+	<thead>
+		<tr>
+			<th scope="col">Id</th>
+			<th scope="col">Nombre</th>
+			<th scope="col">Email</th>
+			<th scope="col">Rol</th>
+		</tr>
+	</thead>
+	<tbody>
+		@for (team of team; track team) {
+			<tr>
+				<th scope="row">{{ team.id }}</th>
+				<td>{{ team.name }}</td>
+				<td>{{ team.email }}</td>
+				<td>
+					<dsb-badge-atom 
+						[text]="team.role"
+						[type]="roleMap[team.role] || 'dark'">
+					</dsb-badge-atom>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
