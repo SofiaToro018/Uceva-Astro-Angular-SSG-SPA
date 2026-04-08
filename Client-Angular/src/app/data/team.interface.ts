@@ -2,8 +2,10 @@ import type { Teams } from "../interfaces/team.interface";
 
 /**
  * Listado de miembros del equipo de trabajo.
+ * 
  * Esta constante representa un conjunto de datos de prueba (mock)
  * que simula la respuesta de un backend REST.
+ * 
  * Se utiliza principalmente para:
  * - Pruebas unitarias
  * - Prácticas de componentes   

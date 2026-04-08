@@ -8,8 +8,13 @@ import { AlertComponent } from '../../components/alert/alert.component';
 /**
  * Componente contenedor de la página de equipo.
  *
+ * Se utiliza para gestionar y mostrar un listado de miembros del equipo
+ * utilizando el componente `TeamTableComponent`.
+ *
  * @remarks
- * Consume el TeamService para poblar el organismo TeamTableComponent.
+ * Este componente se encarga de consumir el servicio `TeamService`
+ * para obtener los miembros del equipo y pasarlos al componente de tabla.
+ * Forma parte de la capa de presentación de la aplicación.
  */
 @Component({
   selector: 'app-team',
@@ -17,10 +22,30 @@ import { AlertComponent } from '../../components/alert/alert.component';
   imports: [TeamTableComponent, AlertComponent],
 })
 export class TeamPage implements OnInit {
+  /**
+   * Listado de miembros del equipo obtenidos desde el servicio.
+   * @type {Teams[]}
+   */
   team: Teams[] = [];
+  /**
+   * Estado actual del componente.
+   *
+   * @default 'init'
+   */
   state: State = 'init';
+  /**
+   * Servicio para obtener miembros del equipo.
+   * @remarks
+   * Se inyecta utilizando la función `inject()` de Angular.
+   */
 
   private teamService = inject(TeamService);
+  /**
+   * Inicializa el componente y carga los miembros del equipo.
+   * @remarks 
+   * Se suscribe al método `getAllTeams()` del servicio y
+   * asigna los datos recibidos a la propiedad `team`.
+   */
 
   ngOnInit(): void {
     this.state = 'loading';
