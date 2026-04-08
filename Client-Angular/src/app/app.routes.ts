@@ -3,6 +3,7 @@ import { DatePage } from './pages/date/date.page';
 import { ProductsPage } from './pages/products/products.page';
 import { UsersPage } from './pages/users/users.page';
 import { TeamPage } from './pages/team/team.page';
+import { ServicesPage } from './pages/servics/services.page';
 
 /**
  * Definición de las rutas principales de la aplicación.
@@ -58,7 +59,16 @@ export const routes: Routes = [
    * 
    */
   { path: 'team', component: TeamPage },
-
+  /**
+   * Ruta de servicios.
+   * 
+   * @remarks 
+   * Renderiza el componente `ServicesPage`, encargado de mostrar y gestionar el listado de servicios ofrecidos.
+   * Esta ruta se agregó recientemente para incluir la nueva página de servicios en la navegación de la aplicación.
+   * Actualmente, el componente `ServicesPage` se encuentra en desarrollo y se espera que esté disponible en la próxima versión de la aplicación.
+   * 
+   */ 
+  { path: 'services', component: ServicesPage },
   /**
    * Ruta comodín.
    *

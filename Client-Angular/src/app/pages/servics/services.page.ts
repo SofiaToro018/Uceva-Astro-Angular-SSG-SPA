@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AlertComponent } from '../../components/alert/alert.component';
 import { Service } from '../../interfaces/service.interface';
 import { State } from '../../interfaces/state.interface';
-import { State } from '../../interfaces/state.interface';
+import { ServicesTableComponent } from '../../components/services-table/services-table.component';
 
 /**
  * Componente contenedor de servicios.
@@ -61,4 +61,5 @@ ngOnInit(): void {
   //   }
   // });
  
+}
 }
