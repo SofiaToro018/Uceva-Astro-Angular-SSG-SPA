@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { AlertComponent } from '../../components/alert/alert.component';
 import { Service } from '../../interfaces/service.interface';
 import { State } from '../../interfaces/state.interface';
 import { ServicesTableComponent } from '../../components/services-table/services-table.component';
+import { ServicesService } from '../../services/servics/servics.service';
+
 
 /**
  * Componente contenedor de servicios.
@@ -40,7 +42,7 @@ services: Service[] = [];
  * @remarks
  * Se inyecta utilizando la función `inject()` de Angular.
  */
-// private servicesService = inject(ServicesService); 
+private servicesService = inject(ServicesService); 
  
 /**
  * Inicializa el componente y carga los servicios.
@@ -50,16 +52,16 @@ services: Service[] = [];
  */
 ngOnInit(): void {
   this.state = 'loading';
-  // this.servicesService.getAllServices().subscribe({
-  //   next: (services) => {
-  //     this.services = services;
-  //     this.state = 'success';
-  //   },
-  //   error: (error) => {
-  //     console.error(error)
-  //     this.state = 'error';
-  //   }
-  // });
+  this.servicesService.getAllServices().subscribe({
+  next: (services) => {
+  this.services = services;
+  this.state = 'success';
+  },
+  error: (error) => {
+  console.error(error)
+  this.state = 'error';
+  }
+  });
  
 }
 }
