@@ -1,23 +1,24 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ContactoPage } from './contacto.page';
+import { ContactPageComponent } from './contacto.page';
 
 describe('ContactoPage', () => {
-  let component: ContactoPage;
-  let fixture: ComponentFixture<ContactoPage>;
+  let component: ContactPageComponent;
+  let fixture: ComponentFixture<ContactPageComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ContactoPage]
+      imports: [ContactPageComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ContactoPage);
+    fixture = TestBed.createComponent(ContactPageComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('dbebería crear el componente', () => {
     expect(component).toBeTruthy();
+    
   });
 });
