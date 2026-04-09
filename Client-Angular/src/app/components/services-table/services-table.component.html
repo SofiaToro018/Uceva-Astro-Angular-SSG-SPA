@@ -3,8 +3,9 @@
 		<tr>
 			<th scope="col">Id</th>
 			<th scope="col">Nombre</th>
-			<th scope="col">Precio</th>
+			<th scope="col">Descripción</th>
 			<th scope="col">Categoria</th>
+			<th scope="col">Precio</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -12,13 +13,15 @@
 			<tr>
 				<th scope="row">{{ service.id }}</th>
 				<td>{{ service.name }}</td>
-				<td>{{ service.price | currency }}</td>
+				<td>{{ service.description }}</td>
 				<td>
 					<dsb-badge-atom
 						[text]="service.category"
 						[type]="categoryMap[service.category]" >
                     </dsb-badge-atom>
 				</td>
+				<td>{{ service.price | currency }}</td>				
+				
 			</tr>
 		}
 	</tbody>

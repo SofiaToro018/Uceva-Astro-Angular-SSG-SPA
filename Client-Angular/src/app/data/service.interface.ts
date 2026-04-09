@@ -14,7 +14,7 @@ import type { Service } from '../interfaces/service.interface';
 export const SERVICES: Service[] = [
   {
     id: 1,
-    name: 'Consultoría T',
+    name: 'Consultoría Tecnológica',
     description: 'Asesoría especializada en tecnología para optimizar procesos empresariales.',
     category: 'Sistemas',
     price: 150000
@@ -33,7 +33,7 @@ export const SERVICES: Service[] = [
  },
  {
     id: 4,
-    name: 'Infraestructura IT',
+    name: 'Infraestructura TI',
     description: 'Implementación y mantenimiento de infraestructura tecnológica robusta.',
     category: 'Infraestructura',
     price: 250000
